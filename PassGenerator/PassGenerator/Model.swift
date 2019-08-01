@@ -22,3 +22,17 @@ enum RideAccess {
     case accessAllRides
     case skipAllRides
 }
+
+
+
+// Enum for Initialization errors
+enum InitializerError: Error {
+    case missingDateOfBirth
+    case missingFirstName
+    case missingLastName
+    case missingStreetAddress
+    case missingCity
+    case missingState
+    case missingZipCode
+    case olderThanAgeLimit
+}

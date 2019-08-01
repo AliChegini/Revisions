@@ -12,6 +12,9 @@ import Foundation
 class Guest {
     var areaAccess: [AreaAccess] = [.amusementAreas]
     var rideAccess: [RideAccess] = [.accessAllRides]
+    var discountOnFood: Int?
+    var discountOnMerchandise: Int?
+    
 }
 
 
@@ -22,4 +25,23 @@ class ClassicGuest: Guest {
 }
 
 
+class VIPGuest: Guest {
+    override init() {
+        super.init()
+        self.rideAccess = [.accessAllRides, .skipAllRides]
+        self.discountOnFood = 10
+        self.discountOnMerchandise = 20
+    }
+}
+
+
+class ChildGuest: Guest {
+    
+    //let maxChildAge = 5
+    
+    init(dateOfBirth: Date) throws {
+        super.init()
+        
+    }
+}
 
