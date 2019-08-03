@@ -10,9 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let parser = JSONParser()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        parser.parsePerson { (data, error) in
+            if let data = data {
+                print(data)
+            }
+        }
         
     }
 

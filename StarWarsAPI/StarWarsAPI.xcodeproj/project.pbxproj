@@ -14,6 +14,7 @@
 		7C36537422F4333B002D1F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C36537222F4333B002D1F13 /* LaunchScreen.storyboard */; };
 		7C36537C22F43447002D1F13 /* JSONDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36537B22F43447002D1F13 /* JSONDownloader.swift */; };
 		7C36537E22F43647002D1F13 /* StarWarsErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36537D22F43647002D1F13 /* StarWarsErrors.swift */; };
+		7C36538022F59629002D1F13 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36537F22F59629002D1F13 /* JSONParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7C36537522F4333B002D1F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C36537B22F43447002D1F13 /* JSONDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDownloader.swift; sourceTree = "<group>"; };
 		7C36537D22F43647002D1F13 /* StarWarsErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsErrors.swift; sourceTree = "<group>"; };
+		7C36537F22F59629002D1F13 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				7C36536922F4333A002D1F13 /* AppDelegate.swift */,
 				7C36536B22F4333A002D1F13 /* ViewController.swift */,
 				7C36537B22F43447002D1F13 /* JSONDownloader.swift */,
+				7C36537F22F59629002D1F13 /* JSONParser.swift */,
 				7C36537D22F43647002D1F13 /* StarWarsErrors.swift */,
 				7C36536D22F4333A002D1F13 /* Main.storyboard */,
 				7C36537022F4333B002D1F13 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C36537C22F43447002D1F13 /* JSONDownloader.swift in Sources */,
+				7C36538022F59629002D1F13 /* JSONParser.swift in Sources */,
 				7C36536C22F4333A002D1F13 /* ViewController.swift in Sources */,
 				7C36536A22F4333A002D1F13 /* AppDelegate.swift in Sources */,
 				7C36537E22F43647002D1F13 /* StarWarsErrors.swift in Sources */,

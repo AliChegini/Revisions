@@ -12,6 +12,7 @@ enum StarWarsErrors: Error {
     case requestFailed
     case responseUnsuccessful
     case couldNotConstructURL
+    case couldNotParseJSON
 }
 
 
