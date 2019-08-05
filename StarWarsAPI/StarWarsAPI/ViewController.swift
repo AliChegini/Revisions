@@ -16,9 +16,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        parser.parsePerson { (data, error) in
-            if let data = data {
-                print(data)
+        parser.parsePerson { (result) in
+            switch result {
+            case .success(let person):
+                print(person)
+            case .failure(let error):
+                print(error)
             }
         }
         

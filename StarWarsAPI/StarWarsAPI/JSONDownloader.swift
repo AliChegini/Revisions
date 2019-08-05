@@ -21,25 +21,25 @@ class JSONDownloader {
     }
     
     
-    func downloadJSON(stringURL: String, completionHandler completion: @escaping (Data?, StarWarsErrors?) -> Void) {
+    func downloadJSON(stringURL: String, completionHandler completion: @escaping (Result<Data, StarWarsErrors>) -> Void) {
         guard let url = URL(string: stringURL) else {
-            completion(nil, .couldNotConstructURL)
+            completion(.failure(.couldNotConstructURL))
             return
         }
         let request = URLRequest(url: url)
         
         let task = session.dataTask(with: request) { (data, response, error) in
             guard let response = response as? HTTPURLResponse else {
-                completion(nil, .requestFailed)
+                completion(.failure(.requestFailed))
                 return
             }
             
             if response.statusCode == 200 {
                 if let data = data {
-                    completion(data, nil)
+                    completion(.success(data))
                 }
             } else {
-                completion(nil, .responseUnsuccessful)
+                completion(.failure(.responseUnsuccessful))
             }
             
         }
