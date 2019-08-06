@@ -26,6 +26,7 @@ class JSONDownloader {
             completion(.failure(.couldNotConstructURL))
             return
         }
+        
         let request = URLRequest(url: url)
         
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -37,9 +38,9 @@ class JSONDownloader {
             if response.statusCode == 200 {
                 if let data = data {
                     completion(.success(data))
+                } else {
+                    completion(.failure(.responseUnsuccessful))
                 }
-            } else {
-                completion(.failure(.responseUnsuccessful))
             }
             
         }

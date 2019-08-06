@@ -22,22 +22,23 @@ class JSONParser {
     private let url = "https://swapi.co/api/people/1/"
     
     func parsePerson(completionHandler completion: @escaping (Result<Person, StarWarsErrors>) -> Void) {
-        
         downloader.downloadJSON(stringURL: url) { (result) in
             switch result {
-            case .success(let person):
-                print(person)
+            case .success(let data):
+                let decoder = JSONDecoder()
+                do {
+                    let person = try decoder.decode(Person.self, from: data)
+                    completion(.success(person))
+                } catch {
+                    completion(.failure(.couldNotParseJSON))
+                }
             case .failure(let error):
-                print(error)
+                completion(.failure(error))
             }
         }
-        
     }
     
-    // continue with the following tutorial
-    // https://medium.com/@alfianlosari/building-simple-async-api-request-with-swift-5-result-type-alfian-losari-e92f4e9ab412
-    // still need to parse the result type in future session
-    
+
 }
 
 
