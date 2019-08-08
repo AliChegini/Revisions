@@ -8,26 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		7C4E1E9522FAD92E00BFFF26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4E1E9422FAD92E00BFFF26 /* AppDelegate.swift */; };
-		7C4E1E9722FAD92E00BFFF26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4E1E9622FAD92E00BFFF26 /* ViewController.swift */; };
-		7C4E1E9A22FAD92E00BFFF26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4E1E9822FAD92E00BFFF26 /* Main.storyboard */; };
+		7C4E1E9722FAD92E00BFFF26 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4E1E9622FAD92E00BFFF26 /* TableViewController.swift */; };
 		7C4E1E9C22FAD93000BFFF26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4E1E9B22FAD93000BFFF26 /* Assets.xcassets */; };
 		7C4E1E9F22FAD93000BFFF26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4E1E9D22FAD93000BFFF26 /* LaunchScreen.storyboard */; };
 		7C4E1EA722FAD97200BFFF26 /* JSONDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4E1EA622FAD97200BFFF26 /* JSONDownloader.swift */; };
 		7C4E1EA922FADA6300BFFF26 /* MovieNightErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4E1EA822FADA6300BFFF26 /* MovieNightErrors.swift */; };
 		7C4E1EAB22FADCAE00BFFF26 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4E1EAA22FADCAE00BFFF26 /* JSONParser.swift */; };
+		7C6A2ED122FC377400D7E767 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6A2ED022FC377400D7E767 /* MyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7C4E1E9122FAD92E00BFFF26 /* MovieNightAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieNightAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4E1E9422FAD92E00BFFF26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C4E1E9622FAD92E00BFFF26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7C4E1E9922FAD92E00BFFF26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7C4E1E9622FAD92E00BFFF26 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7C4E1E9B22FAD93000BFFF26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C4E1E9E22FAD93000BFFF26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C4E1EA022FAD93000BFFF26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C4E1EA622FAD97200BFFF26 /* JSONDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDownloader.swift; sourceTree = "<group>"; };
 		7C4E1EA822FADA6300BFFF26 /* MovieNightErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNightErrors.swift; sourceTree = "<group>"; };
 		7C4E1EAA22FADCAE00BFFF26 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		7C6A2ED022FC377400D7E767 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				7C4E1E9422FAD92E00BFFF26 /* AppDelegate.swift */,
-				7C4E1E9622FAD92E00BFFF26 /* ViewController.swift */,
+				7C4E1E9622FAD92E00BFFF26 /* TableViewController.swift */,
 				7C4E1EA622FAD97200BFFF26 /* JSONDownloader.swift */,
 				7C4E1EAA22FADCAE00BFFF26 /* JSONParser.swift */,
 				7C4E1EA822FADA6300BFFF26 /* MovieNightErrors.swift */,
-				7C4E1E9822FAD92E00BFFF26 /* Main.storyboard */,
+				7C6A2ED022FC377400D7E767 /* MyCell.swift */,
 				7C4E1E9B22FAD93000BFFF26 /* Assets.xcassets */,
 				7C4E1E9D22FAD93000BFFF26 /* LaunchScreen.storyboard */,
 				7C4E1EA022FAD93000BFFF26 /* Info.plist */,
@@ -133,7 +133,6 @@
 			files = (
 				7C4E1E9F22FAD93000BFFF26 /* LaunchScreen.storyboard in Resources */,
 				7C4E1E9C22FAD93000BFFF26 /* Assets.xcassets in Resources */,
-				7C4E1E9A22FAD92E00BFFF26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +146,8 @@
 				7C4E1EA922FADA6300BFFF26 /* MovieNightErrors.swift in Sources */,
 				7C4E1EAB22FADCAE00BFFF26 /* JSONParser.swift in Sources */,
 				7C4E1EA722FAD97200BFFF26 /* JSONDownloader.swift in Sources */,
-				7C4E1E9722FAD92E00BFFF26 /* ViewController.swift in Sources */,
+				7C6A2ED122FC377400D7E767 /* MyCell.swift in Sources */,
+				7C4E1E9722FAD92E00BFFF26 /* TableViewController.swift in Sources */,
 				7C4E1E9522FAD92E00BFFF26 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,14 +155,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7C4E1E9822FAD92E00BFFF26 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C4E1E9922FAD92E00BFFF26 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7C4E1E9D22FAD93000BFFF26 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
