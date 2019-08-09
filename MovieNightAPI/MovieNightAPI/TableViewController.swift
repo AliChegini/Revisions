@@ -12,6 +12,8 @@ class MyTableViewController: UITableViewController {
 
     let parser = JSONParser()
     
+    var resultArray: [Genre] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,13 +22,16 @@ class MyTableViewController: UITableViewController {
         tableView.register(MyCell.self, forCellReuseIdentifier: "myCell")
         
         
-        
-        // continue with populating array and showing data from API in tableview
-        // create an array and loop through it
         parser.parseGenres { (result) in
             switch result {
             case .success(let data):
-                print(data.genres.count)
+                for genre in data.genres {
+                    self.resultArray.append(genre)
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+        
             case .failure(let error):
                 print(error)
             }
@@ -36,16 +41,15 @@ class MyTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return resultArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MyCell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyCell
-        cell.nameLabel.text = "oops"
+        cell.nameLabel.text = resultArray[indexPath.row].name
+        cell.idLabel.text = String(resultArray[indexPath.row].id)
         return cell
     }
-    
-    
     
     
     
