@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C7C22DA22FD846500E02849 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7C22D922FD846500E02849 /* AppDelegate.swift */; };
-		7C7C22DC22FD846500E02849 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7C22DB22FD846500E02849 /* MasterViewController.swift */; };
-		7C7C22DE22FD846500E02849 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7C22DD22FD846500E02849 /* DetailViewController.swift */; };
-		7C7C22E322FD846700E02849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C7C22E222FD846700E02849 /* Assets.xcassets */; };
-		7C7C22E622FD846700E02849 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C7C22E422FD846700E02849 /* LaunchScreen.storyboard */; };
+		7C7C22FA22FED58E00E02849 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7C22F922FED58E00E02849 /* AppDelegate.swift */; };
+		7C7C22FC22FED58E00E02849 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7C22FB22FED58E00E02849 /* TableViewController.swift */; };
+		7C7C230122FED58E00E02849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C7C230022FED58E00E02849 /* Assets.xcassets */; };
+		7C7C230422FED58E00E02849 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C7C230222FED58E00E02849 /* LaunchScreen.storyboard */; };
+		7C7C230C22FEE30500E02849 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7C230B22FEE30500E02849 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7C7C22D622FD846500E02849 /* DiaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C7C22D922FD846500E02849 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C7C22DB22FD846500E02849 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		7C7C22DD22FD846500E02849 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		7C7C22E222FD846700E02849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7C7C22E522FD846700E02849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7C7C22E722FD846700E02849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C7C22F622FED58E00E02849 /* DiaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C7C22F922FED58E00E02849 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7C7C22FB22FED58E00E02849 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		7C7C230022FED58E00E02849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7C7C230322FED58E00E02849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7C7C230522FED58E00E02849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C7C230B22FEE30500E02849 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7C7C22D322FD846500E02849 /* Frameworks */ = {
+		7C7C22F322FED58E00E02849 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,31 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7C7C22CD22FD846400E02849 = {
+		7C7C22ED22FED58E00E02849 = {
 			isa = PBXGroup;
 			children = (
-				7C7C22D822FD846500E02849 /* DiaryApp */,
-				7C7C22D722FD846500E02849 /* Products */,
+				7C7C22F822FED58E00E02849 /* DiaryApp */,
+				7C7C22F722FED58E00E02849 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7C7C22D722FD846500E02849 /* Products */ = {
+		7C7C22F722FED58E00E02849 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7C7C22D622FD846500E02849 /* DiaryApp.app */,
+				7C7C22F622FED58E00E02849 /* DiaryApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7C7C22D822FD846500E02849 /* DiaryApp */ = {
+		7C7C22F822FED58E00E02849 /* DiaryApp */ = {
 			isa = PBXGroup;
 			children = (
-				7C7C22D922FD846500E02849 /* AppDelegate.swift */,
-				7C7C22DB22FD846500E02849 /* MasterViewController.swift */,
-				7C7C22DD22FD846500E02849 /* DetailViewController.swift */,
-				7C7C22E222FD846700E02849 /* Assets.xcassets */,
-				7C7C22E422FD846700E02849 /* LaunchScreen.storyboard */,
-				7C7C22E722FD846700E02849 /* Info.plist */,
+				7C7C22F922FED58E00E02849 /* AppDelegate.swift */,
+				7C7C22FB22FED58E00E02849 /* TableViewController.swift */,
+				7C7C230B22FEE30500E02849 /* ViewController.swift */,
+				7C7C230022FED58E00E02849 /* Assets.xcassets */,
+				7C7C230222FED58E00E02849 /* LaunchScreen.storyboard */,
+				7C7C230522FED58E00E02849 /* Info.plist */,
 			);
 			path = DiaryApp;
 			sourceTree = "<group>";
@@ -67,13 +67,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7C7C22D522FD846500E02849 /* DiaryApp */ = {
+		7C7C22F522FED58E00E02849 /* DiaryApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7C7C22EA22FD846700E02849 /* Build configuration list for PBXNativeTarget "DiaryApp" */;
+			buildConfigurationList = 7C7C230822FED58E00E02849 /* Build configuration list for PBXNativeTarget "DiaryApp" */;
 			buildPhases = (
-				7C7C22D222FD846500E02849 /* Sources */,
-				7C7C22D322FD846500E02849 /* Frameworks */,
-				7C7C22D422FD846500E02849 /* Resources */,
+				7C7C22F222FED58E00E02849 /* Sources */,
+				7C7C22F322FED58E00E02849 /* Frameworks */,
+				7C7C22F422FED58E00E02849 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -81,25 +81,25 @@
 			);
 			name = DiaryApp;
 			productName = DiaryApp;
-			productReference = 7C7C22D622FD846500E02849 /* DiaryApp.app */;
+			productReference = 7C7C22F622FED58E00E02849 /* DiaryApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7C7C22CE22FD846400E02849 /* Project object */ = {
+		7C7C22EE22FED58E00E02849 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Ali C";
 				TargetAttributes = {
-					7C7C22D522FD846500E02849 = {
+					7C7C22F522FED58E00E02849 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 7C7C22D122FD846400E02849 /* Build configuration list for PBXProject "DiaryApp" */;
+			buildConfigurationList = 7C7C22F122FED58E00E02849 /* Build configuration list for PBXProject "DiaryApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,46 +107,46 @@
 				en,
 				Base,
 			);
-			mainGroup = 7C7C22CD22FD846400E02849;
-			productRefGroup = 7C7C22D722FD846500E02849 /* Products */;
+			mainGroup = 7C7C22ED22FED58E00E02849;
+			productRefGroup = 7C7C22F722FED58E00E02849 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7C7C22D522FD846500E02849 /* DiaryApp */,
+				7C7C22F522FED58E00E02849 /* DiaryApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7C7C22D422FD846500E02849 /* Resources */ = {
+		7C7C22F422FED58E00E02849 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C7C22E622FD846700E02849 /* LaunchScreen.storyboard in Resources */,
-				7C7C22E322FD846700E02849 /* Assets.xcassets in Resources */,
+				7C7C230422FED58E00E02849 /* LaunchScreen.storyboard in Resources */,
+				7C7C230122FED58E00E02849 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7C7C22D222FD846500E02849 /* Sources */ = {
+		7C7C22F222FED58E00E02849 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C7C22DE22FD846500E02849 /* DetailViewController.swift in Sources */,
-				7C7C22DC22FD846500E02849 /* MasterViewController.swift in Sources */,
-				7C7C22DA22FD846500E02849 /* AppDelegate.swift in Sources */,
+				7C7C230C22FEE30500E02849 /* ViewController.swift in Sources */,
+				7C7C22FC22FED58E00E02849 /* TableViewController.swift in Sources */,
+				7C7C22FA22FED58E00E02849 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7C7C22E422FD846700E02849 /* LaunchScreen.storyboard */ = {
+		7C7C230222FED58E00E02849 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7C7C22E522FD846700E02849 /* Base */,
+				7C7C230322FED58E00E02849 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -154,7 +154,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7C7C22E822FD846700E02849 /* Debug */ = {
+		7C7C230622FED58E00E02849 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,7 +215,7 @@
 			};
 			name = Debug;
 		};
-		7C7C22E922FD846700E02849 /* Release */ = {
+		7C7C230722FED58E00E02849 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,7 +270,7 @@
 			};
 			name = Release;
 		};
-		7C7C22EB22FD846700E02849 /* Debug */ = {
+		7C7C230922FED58E00E02849 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -288,7 +288,7 @@
 			};
 			name = Debug;
 		};
-		7C7C22EC22FD846700E02849 /* Release */ = {
+		7C7C230A22FED58E00E02849 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -309,25 +309,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7C7C22D122FD846400E02849 /* Build configuration list for PBXProject "DiaryApp" */ = {
+		7C7C22F122FED58E00E02849 /* Build configuration list for PBXProject "DiaryApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7C7C22E822FD846700E02849 /* Debug */,
-				7C7C22E922FD846700E02849 /* Release */,
+				7C7C230622FED58E00E02849 /* Debug */,
+				7C7C230722FED58E00E02849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7C7C22EA22FD846700E02849 /* Build configuration list for PBXNativeTarget "DiaryApp" */ = {
+		7C7C230822FED58E00E02849 /* Build configuration list for PBXNativeTarget "DiaryApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7C7C22EB22FD846700E02849 /* Debug */,
-				7C7C22EC22FD846700E02849 /* Release */,
+				7C7C230922FED58E00E02849 /* Debug */,
+				7C7C230A22FED58E00E02849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 7C7C22CE22FD846400E02849 /* Project object */;
+	rootObject = 7C7C22EE22FED58E00E02849 /* Project object */;
 }
