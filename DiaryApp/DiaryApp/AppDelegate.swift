@@ -20,10 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let controller = TableViewController()
-        let navigationController = UINavigationController(rootViewController: controller)
-        window?.rootViewController = navigationController
-        
+        let masterVC = MasterViewController()
+        masterVC.view.backgroundColor = .white
+        window?.rootViewController = masterVC
         
         return true
     }
