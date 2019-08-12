@@ -12,6 +12,20 @@ class MasterViewController: UIViewController {
     
     let navSegmentedControl = UISegmentedControl()
     let containerView = UIView()
+    
+    lazy var yellowVC: YellowViewController = {
+       let vc = YellowViewController()
+        self.addChild(vc)
+        return vc
+    }()
+    
+    
+    lazy var greenVC: GreenViewController = {
+       let vc = GreenViewController()
+        self.addChild(vc)
+        return vc
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,23 +39,48 @@ class MasterViewController: UIViewController {
     func setupViews() {
         let screenHeight = UIScreen.main.bounds.height
         
-        navSegmentedControl.insertSegment(withTitle: "Yellow", at: 0, animated: true)
-        navSegmentedControl.insertSegment(withTitle: "Green", at: 1, animated: true)
+        navSegmentedControl.insertSegment(withTitle: "Yellow", at: 0, animated: false)
+        navSegmentedControl.insertSegment(withTitle: "Green", at: 1, animated: false)
         navSegmentedControl.selectedSegmentIndex = 0
         
-        view.addSubview(navSegmentedControl)
         view.addSubview(containerView)
+        view.addSubview(navSegmentedControl)
+        
+        
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        containerView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        containerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         
         navSegmentedControl.translatesAutoresizingMaskIntoConstraints = false
         navSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         navSegmentedControl.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: screenHeight / -2.5).isActive = true
         
-        // continue with the following tutorial
-        // https://medium.com/@Dougly/creating-a-custom-view-controller-navigation-interface-programmatically-swift-3-1-8c9e582cdb30
+        navSegmentedControl.addTarget(self, action: #selector(madeSelection), for: .valueChanged)
         
     }
     
     
+    func addAsChildVC(childVC: UIViewController) {
+        addChild(childVC)
+        containerView.addSubview(childVC.view)
+        childVC.view.frame = containerView.frame
+        childVC.didMove(toParent: self)
+    }
+    
+    
+    @objc func madeSelection(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 1 {
+            yellowVC.view.isHidden = true
+        }
+        
+        if sender.selectedSegmentIndex == 0 {
+            greenVC.view.isHidden = true
+        }
+    }
+    
+    // continue debugging 
     
 
 }
