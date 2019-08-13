@@ -14,6 +14,7 @@ class GreenViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .green
+        print("GREEN!")
         
     }
     

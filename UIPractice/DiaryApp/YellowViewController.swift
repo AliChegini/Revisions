@@ -14,6 +14,7 @@ class YellowViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.yellow
+        print("YELLOW!")
         
     }
     

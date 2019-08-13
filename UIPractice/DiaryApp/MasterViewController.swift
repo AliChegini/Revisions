@@ -15,14 +15,14 @@ class MasterViewController: UIViewController {
     
     lazy var yellowVC: YellowViewController = {
        let vc = YellowViewController()
-        self.addChild(vc)
+        self.addAsChildVC(childVC: vc)
         return vc
     }()
     
     
     lazy var greenVC: GreenViewController = {
        let vc = GreenViewController()
-        self.addChild(vc)
+        self.addAsChildVC(childVC: vc)
         return vc
     }()
     
@@ -31,13 +31,13 @@ class MasterViewController: UIViewController {
         super.viewDidLoad()
 
         setupViews()
-        
-        
     }
     
     
     func setupViews() {
         let screenHeight = UIScreen.main.bounds.height
+        
+        navSegmentedControl.addTarget(self, action: #selector(madeSelection), for: .valueChanged)
         
         navSegmentedControl.insertSegment(withTitle: "Yellow", at: 0, animated: false)
         navSegmentedControl.insertSegment(withTitle: "Green", at: 1, animated: false)
@@ -56,32 +56,23 @@ class MasterViewController: UIViewController {
         navSegmentedControl.translatesAutoresizingMaskIntoConstraints = false
         navSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         navSegmentedControl.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: screenHeight / -2.5).isActive = true
-        
-        navSegmentedControl.addTarget(self, action: #selector(madeSelection), for: .valueChanged)
-        
+        navSegmentedControl.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
     }
+    
     
     
     func addAsChildVC(childVC: UIViewController) {
         addChild(childVC)
         containerView.addSubview(childVC.view)
-        childVC.view.frame = containerView.frame
+        childVC.view.frame = self.view.frame
         childVC.didMove(toParent: self)
     }
     
     
     @objc func madeSelection(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 1 {
-            yellowVC.view.isHidden = true
-        }
-        
-        if sender.selectedSegmentIndex == 0 {
-            greenVC.view.isHidden = true
-        }
+        yellowVC.view.isHidden = sender.selectedSegmentIndex == 1
+        greenVC.view.isHidden = sender.selectedSegmentIndex == 0
     }
     
-    // continue debugging 
-    
-
 }
 
