@@ -7,22 +7,21 @@
 //
 
 import UIKit
+import Foundation
 
 class DetailViewController: UIViewController {
 
+    var text = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .green
-        let button = UIButton(type: .roundedRect)
-        button.setTitle("Close", for: .normal)
-        button.backgroundColor = .white
-        button.frame = CGRect(x: 10, y: 10, width: 40, height: 20)
-        self.view.addSubview(button)
-        
-        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        
+        createButton()
+        createLabel()
         setupDetailVC()
+        
     }
     
     
@@ -31,13 +30,33 @@ class DetailViewController: UIViewController {
     }
     
     
+    func createButton() {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("Close", for: .normal)
+        button.backgroundColor = .white
+        button.frame = CGRect(x: 200, y: 200, width: 50, height: 30)
+        self.view.addSubview(button)
+        
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        
+    }
+    
+    func createLabel() {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = text
+        label.textColor = .red
+        label.frame = CGRect(x: 100, y: 100, width: 80, height: 40)
+        self.view.addSubview(label)
+        
+    }
+    
     
     func setupDetailVC () {
         
     }
     
     
-    // continue with passing data from Main view to detailVC all in code
+    // continue with autolayout constraint for (all in code) for a simple view, not a cell!
     
-
 }

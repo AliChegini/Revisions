@@ -10,6 +10,10 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    
+    let array: [String] = ["Bingo", "Iamsterdam", "OK", "Hello", "Maybe"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,13 +33,20 @@ class TableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return array.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MyCell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! MyCell
-            
+        cell.nameLabel.text = array[indexPath.row]
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        detailVC.text = array[indexPath.row]
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
 
