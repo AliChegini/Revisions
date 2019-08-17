@@ -15,10 +15,11 @@ class DetailViewController: UIViewController {
     
     
     let closeButton: UIButton = {
-       let button = UIButton()
+       let button = UIButton(type: .roundedRect)
         button.setTitle("Close", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = UIColor.white
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = UIColor.red
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         
         return button
@@ -29,7 +30,8 @@ class DetailViewController: UIViewController {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Hello world for now"
-        label.textColor = UIColor.red
+        label.textColor = UIColor.black
+        label.textAlignment = .center
         
         return label
     }()
@@ -46,10 +48,19 @@ class DetailViewController: UIViewController {
     
     func setupViews () {
         view.addSubview(closeButton)
+        
+        label.text = text
         view.addSubview(label)
         
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-40-[v0]-40-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": closeButton]))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-60-[v0]-60-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": closeButton]))
+        // Using top and bottom anchor to properly place the label and button
+        closeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        closeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40).isActive = true
+        closeButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        closeButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        label.widthAnchor.constraint(equalToConstant: 150).isActive = true
         
     }
     
@@ -58,6 +69,9 @@ class DetailViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    // continue with button and label and practice auto layout constraint
     
+    // TODO:
+    // continue with https://www.youtube.com/watch?v=9RydRg0ZKaI
+    
+
 }

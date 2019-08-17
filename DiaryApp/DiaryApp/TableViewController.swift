@@ -18,7 +18,7 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         
         
-        navigationItem.title = "Hello World"
+        navigationItem.title = "Home"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAction))
         
         tableView.register(MyCell.self, forCellReuseIdentifier: "myCell")
