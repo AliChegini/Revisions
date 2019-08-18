@@ -37,6 +37,16 @@ class DetailViewController: UIViewController {
     }()
     
     
+    let textView: UITextView = {
+       let text = UITextView()
+        text.translatesAutoresizingMaskIntoConstraints = false
+        text.textAlignment = .center
+        text.backgroundColor = UIColor.white
+        
+        return text
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,15 +58,23 @@ class DetailViewController: UIViewController {
     
     func setupViews () {
         view.addSubview(closeButton)
+        view.addSubview(textView)
         
         label.text = text
         view.addSubview(label)
+        
+        
+        textView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        textView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        textView.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        textView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         // Using top and bottom anchor to properly place the label and button
         closeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         closeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40).isActive = true
         closeButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         closeButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        
         
         label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
@@ -71,6 +89,7 @@ class DetailViewController: UIViewController {
     
     
     // TODO:
+    // continue with Core Data Stack from scratch
     // continue with https://www.youtube.com/watch?v=9RydRg0ZKaI
     
 
