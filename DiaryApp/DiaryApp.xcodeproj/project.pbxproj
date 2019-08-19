@@ -14,6 +14,9 @@
 		7C8AB46823040887005C7524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8AB46623040887005C7524 /* LaunchScreen.storyboard */; };
 		7C8AB47023040CAD005C7524 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8AB46F23040CAD005C7524 /* MyCell.swift */; };
 		7C8AB4722304109A005C7524 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8AB4712304109A005C7524 /* DetailViewController.swift */; };
+		7CB2F3C7230ABB7700D02A95 /* DiaryApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2F3C5230ABB7700D02A95 /* DiaryApp.xcdatamodeld */; };
+		7CB2F3CE230AC0AE00D02A95 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2F3CC230AC0AE00D02A95 /* Item+CoreDataClass.swift */; };
+		7CB2F3CF230AC0AE00D02A95 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2F3CD230AC0AE00D02A95 /* Item+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		7C8AB46923040887005C7524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C8AB46F23040CAD005C7524 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 		7C8AB4712304109A005C7524 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7CB2F3C6230ABB7700D02A95 /* DiaryApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryApp.xcdatamodel; sourceTree = "<group>"; };
+		7CB2F3CC230AC0AE00D02A95 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7CB2F3CD230AC0AE00D02A95 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				7C8AB46423040887005C7524 /* Assets.xcassets */,
 				7C8AB46623040887005C7524 /* LaunchScreen.storyboard */,
 				7C8AB46923040887005C7524 /* Info.plist */,
+				7CB2F3C5230ABB7700D02A95 /* DiaryApp.xcdatamodeld */,
+				7CB2F3CC230AC0AE00D02A95 /* Item+CoreDataClass.swift */,
+				7CB2F3CD230AC0AE00D02A95 /* Item+CoreDataProperties.swift */,
 			);
 			path = DiaryApp;
 			sourceTree = "<group>";
@@ -142,9 +151,12 @@
 			files = (
 				7C29036B2309A45A00D9D830 /* CoreDataStack.swift in Sources */,
 				7C8AB47023040CAD005C7524 /* MyCell.swift in Sources */,
+				7CB2F3CF230AC0AE00D02A95 /* Item+CoreDataProperties.swift in Sources */,
 				7C8AB46023040886005C7524 /* TableViewController.swift in Sources */,
+				7CB2F3C7230ABB7700D02A95 /* DiaryApp.xcdatamodeld in Sources */,
 				7C8AB45E23040886005C7524 /* AppDelegate.swift in Sources */,
 				7C8AB4722304109A005C7524 /* DetailViewController.swift in Sources */,
+				7CB2F3CE230AC0AE00D02A95 /* Item+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +348,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7CB2F3C5230ABB7700D02A95 /* DiaryApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7CB2F3C6230ABB7700D02A95 /* DiaryApp.xcdatamodel */,
+			);
+			currentVersion = 7CB2F3C6230ABB7700D02A95 /* DiaryApp.xcdatamodel */;
+			path = DiaryApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7C8AB45223040886005C7524 /* Project object */;
 }

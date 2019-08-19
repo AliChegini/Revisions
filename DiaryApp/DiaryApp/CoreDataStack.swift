@@ -16,7 +16,7 @@ class CoreDataStack {
        let container = NSPersistentContainer(name: "DiaryApp")
         container.loadPersistentStores() { (storeDescription, error) in
             if let error = error as NSError? {
-                
+                print(error)
             }
         }
         return container
@@ -29,8 +29,9 @@ class CoreDataStack {
         return container.viewContext
     }()
     
-    
 }
+
+
 
 
 extension NSManagedObjectContext {
@@ -39,13 +40,11 @@ extension NSManagedObjectContext {
             do {
                 try save()
             } catch {
-                print(error)
+                print("Could not save data - \(error)")
             }
         }
     }
 }
-
-
 
 
 
