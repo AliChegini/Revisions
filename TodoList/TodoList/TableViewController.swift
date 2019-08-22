@@ -14,10 +14,17 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.title = "TODO List"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAction))
         
-        print("Hello world!")
     }
 
 
+    @objc func addAction() {
+        let addVC = AddEntryController()
+        let newNav = UINavigationController(rootViewController: addVC)
+        present(newNav, animated: true, completion: nil)
+    }
+    
+    
 }
 
