@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7C20BA3B230E75EB009BE1E9 /* TodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C20BA39230E75EB009BE1E9 /* TodoList.xcdatamodeld */; };
 		7C20BA3D230E7C30009BE1E9 /* AddEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C20BA3C230E7C30009BE1E9 /* AddEntryController.swift */; };
+		7C293237230FFE340082E77F /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C293235230FFE340082E77F /* Item+CoreDataClass.swift */; };
+		7C293238230FFE340082E77F /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C293236230FFE340082E77F /* Item+CoreDataProperties.swift */; };
+		7C29323A2310016B0082E77F /* TodoListErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2932392310016B0082E77F /* TodoListErrors.swift */; };
 		7C3BDBF6230D64640061F060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3BDBF5230D64640061F060 /* AppDelegate.swift */; };
 		7C3BDBF8230D64640061F060 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3BDBF7230D64640061F060 /* TableViewController.swift */; };
 		7C3BDBFD230D64660061F060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C3BDBFC230D64660061F060 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		7C20BA3A230E75EB009BE1E9 /* TodoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoList.xcdatamodel; sourceTree = "<group>"; };
 		7C20BA3C230E7C30009BE1E9 /* AddEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryController.swift; sourceTree = "<group>"; };
+		7C293235230FFE340082E77F /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7C293236230FFE340082E77F /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7C2932392310016B0082E77F /* TodoListErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListErrors.swift; sourceTree = "<group>"; };
 		7C3BDBF2230D64640061F060 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C3BDBF5230D64640061F060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C3BDBF7230D64640061F060 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +68,9 @@
 				7C3BDBF7230D64640061F060 /* TableViewController.swift */,
 				7C20BA3C230E7C30009BE1E9 /* AddEntryController.swift */,
 				7C3BDC07230D69560061F060 /* CoreDataStack.swift */,
+				7C293235230FFE340082E77F /* Item+CoreDataClass.swift */,
+				7C293236230FFE340082E77F /* Item+CoreDataProperties.swift */,
+				7C2932392310016B0082E77F /* TodoListErrors.swift */,
 				7C3BDBFC230D64660061F060 /* Assets.xcassets */,
 				7C3BDBFE230D64660061F060 /* LaunchScreen.storyboard */,
 				7C3BDC01230D64660061F060 /* Info.plist */,
@@ -140,10 +149,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C293238230FFE340082E77F /* Item+CoreDataProperties.swift in Sources */,
+				7C293237230FFE340082E77F /* Item+CoreDataClass.swift in Sources */,
 				7C20BA3D230E7C30009BE1E9 /* AddEntryController.swift in Sources */,
 				7C3BDC08230D69560061F060 /* CoreDataStack.swift in Sources */,
 				7C3BDBF8230D64640061F060 /* TableViewController.swift in Sources */,
 				7C3BDBF6230D64640061F060 /* AppDelegate.swift in Sources */,
+				7C29323A2310016B0082E77F /* TodoListErrors.swift in Sources */,
 				7C20BA3B230E75EB009BE1E9 /* TodoList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,3 +28,20 @@ class CoreDataStack {
     }()
     
 }
+
+
+extension NSManagedObjectContext {
+    func saveChanges() throws {
+        if self.hasChanges {
+            do {
+                try save()
+            } catch {
+                throw error
+            }
+        }
+    }
+}
+
+
+
+
