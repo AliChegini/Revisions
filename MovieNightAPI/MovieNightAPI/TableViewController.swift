@@ -31,7 +31,7 @@ class MyTableViewController: UITableViewController {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-        
+
             case .failure(let error):
                 print(error)
             }
