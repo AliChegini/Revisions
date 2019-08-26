@@ -13,11 +13,13 @@ class TableViewController: UITableViewController {
 
     let managedObjectContext = CoreDataStack().managedObjectContext
     
-    var items: [Item] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    lazy var fetchedResultsController: NSFetchedResultsController<Item> = {
+        let request: NSFetchRequest<Item> = Item.fetchRequest()
+        let controller = NSFetchedResultsController(fetchRequest: request, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        
+        return controller
+    }()
+    
     
     
     override func viewDidLoad() {
@@ -29,15 +31,11 @@ class TableViewController: UITableViewController {
         tableView.register(MyCell.self, forCellReuseIdentifier: "myCell")
         
         
-        let request: NSFetchRequest<Item> = Item.fetchRequest()
-        
         do {
-            items = try managedObjectContext.fetch(request)
+            try fetchedResultsController.performFetch()
         } catch {
             print(error)
         }
-        
-        
         
         
         
@@ -46,6 +44,7 @@ class TableViewController: UITableViewController {
 
     @objc func addAction() {
         let addVC = AddEntryController()
+        addVC.managedObjectContext = managedObjectContext
         let newNav = UINavigationController(rootViewController: addVC)
         present(newNav, animated: true, completion: nil)
     }
@@ -54,19 +53,27 @@ class TableViewController: UITableViewController {
    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        guard let section = fetchedResultsController.sections?[section] else {
+            return 0
+        }
+    
+        return section.numberOfObjects
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MyCell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyCell
-        cell.infoLabel.text = items[indexPath.row].text
+        let item = fetchedResultsController.object(at: indexPath)
+        
+        cell.infoLabel.text = item.text
         
         return cell
     }
     
     
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
     
 }
 

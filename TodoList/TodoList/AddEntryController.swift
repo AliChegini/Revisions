@@ -11,7 +11,7 @@ import CoreData
 
 class AddEntryController: UIViewController {
     
-    let managedObjectContext = CoreDataStack().managedObjectContext
+    var managedObjectContext: NSManagedObjectContext!
     
     let textField: UITextField = {
        let textField = UITextField()
