@@ -30,6 +30,8 @@ class TableViewController: UITableViewController {
         
         tableView.register(MyCell.self, forCellReuseIdentifier: "myCell")
         
+        fetchedResultsController.delegate = self
+        
         
         do {
             try fetchedResultsController.performFetch()
@@ -70,10 +72,29 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let item = fetchedResultsController.object(at: indexPath)
+        managedObjectContext.delete(item)
         
+        do {
+             try managedObjectContext.saveChanges()
+        } catch {
+            print(error)
+        }
     }
     
 }
 
+
+extension TableViewController: NSFetchedResultsControllerDelegate {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.reloadData()
+    }
+}
