@@ -52,7 +52,7 @@ class TableViewController: UITableViewController {
     }
     
     
-   
+    // MARK: TableView functions
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let section = fetchedResultsController.sections?[section] else {
@@ -89,6 +89,17 @@ class TableViewController: UITableViewController {
             print(error)
         }
     }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        detailVC.managedObjectContext = managedObjectContext
+        detailVC.item = fetchedResultsController.object(at: indexPath)
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    
+    
     
 }
 
