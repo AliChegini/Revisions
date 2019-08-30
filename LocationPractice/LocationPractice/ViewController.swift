@@ -7,23 +7,35 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, LocationManagerDelegate {
     
-    let manager = LocationManager()
-
+    private let manager = LocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .green
-        navigationItem.title = "Home"
         
-        
+        manager.delegate = self
         manager.requestLocation()
         
         
     }
-
-
+    
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print("did enter region \(region)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        print("did exit region \(region)")
+    }
+    
+    
+    
+    
+    
 }
-
