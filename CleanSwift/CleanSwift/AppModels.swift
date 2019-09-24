@@ -11,4 +11,8 @@ enum AppModels {
     struct Error {
         // implement later
     }
+    
+    struct DataError {
+        // implement later
+    }
 }

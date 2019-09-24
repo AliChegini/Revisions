@@ -1,5 +1,5 @@
 //
-//  ListGenresPresentable.swift
+//  ListGenresPresenter.swift
 //  CleanSwift
 //
 //  Created by Ehsan on 23/09/2019.
@@ -9,22 +9,27 @@
 
 protocol ListGenresPresentable {
     func presentFetchedGenres(for response: ListGenresModels.Response)
-    func presentFetchedGenres(error: DataError)
+    func presentFetchedGenres(error: AppModels.DataError)
 }
 
 
-struct ListGenresPresenter: ListGenresPresentable {
+class ListGenresPresenter: ListGenresPresentable {
+    
     private weak var viewController: ListGenresDisplayable?
     
-    init(viewController: ListGenresDisplayable?) {
+    init(viewController: ListGenresDisplayable) {
         self.viewController = viewController
     }
+    
     
     
     func presentFetchedGenres(for response: ListGenresModels.Response) {
         
     }
     
+    func presentFetchedGenres(error: AppModels.DataError) {
+        
+    }
     
 }
 

@@ -12,20 +12,22 @@ protocol ListGenresBusinessLogic {
 }
 
 
-struct ListGenresInteractor: ListGenresBusinessLogic {
+class ListGenresInteractor: ListGenresBusinessLogic {
     
-    private let presenter: ListGenresPresentable
-    private let genresWorker: GenresWorkerType
+    let presenter: ListGenresPresentable
+    let genresWorker: JSONParserWorker
     
-    init(presenter: ListGenresPresentable, genresWorker: GenresWorkerType) {
+    
+    
+    init(presenter: ListGenresPresentable, worker: JSONParserWorker) {
         self.presenter = presenter
-        self.genresWorker = genresWorker
+        self.genresWorker = worker
     }
     
     
     func fetchGenres(with request: ListGenresModels.FetchRequest) {
-        genresWorker.fetch {
-            // implement later
+        genresWorker.parseGenres {_ in
+            
         }
     }
     
