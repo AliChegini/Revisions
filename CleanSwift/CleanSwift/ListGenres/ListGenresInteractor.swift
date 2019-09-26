@@ -18,7 +18,6 @@ class ListGenresInteractor: ListGenresBusinessLogic {
     let genresWorker: JSONParserWorker
     
     
-    
     init(presenter: ListGenresPresentable, worker: JSONParserWorker) {
         self.presenter = presenter
         self.genresWorker = worker
@@ -26,11 +25,18 @@ class ListGenresInteractor: ListGenresBusinessLogic {
     
     
     func fetchGenres(with request: ListGenresModels.FetchRequest) {
-        genresWorker.parseGenres {_ in
+        genresWorker.parseGenres { genres in
+            do {
+                // success case
+                let value = try genres.get()
+                self.presenter.presentFetchedGenres(for: ListGenresModels.Response(allGenresRaw: value))
+            } catch {
+                // failure case
+                print(error)
+            }
             
         }
     }
-    
     
     
 }

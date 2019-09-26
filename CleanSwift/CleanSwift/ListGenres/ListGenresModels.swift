@@ -17,11 +17,11 @@ enum ListGenresModels {
     }
     
     struct Response {
-        
+        let allGenresRaw: AllGenres
     }
     
     struct ViewModel {
-        
+        let genres: [GenresViewModel]
     }
     
     

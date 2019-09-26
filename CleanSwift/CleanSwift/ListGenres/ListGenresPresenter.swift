@@ -24,7 +24,12 @@ class ListGenresPresenter: ListGenresPresentable {
     
     
     func presentFetchedGenres(for response: ListGenresModels.Response) {
-        
+        let viewModel = ListGenresModels.ViewModel(
+            genres: response.allGenresRaw.genres.map {
+                ListGenresModels.GenresViewModel(id: $0.id, name: $0.name)
+            }
+        )
+        viewController?.displayFetchedGenres(with: viewModel)
     }
     
     func presentFetchedGenres(error: AppModels.DataError) {

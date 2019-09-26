@@ -8,13 +8,10 @@
 
 import UIKit
 
-
 protocol ListGenresDisplayable: class {
     func displayFetchedGenres(with viewModel: ListGenresModels.ViewModel)
     func display(error: AppModels.Error)
 }
-
-
 
 class ListGenresViewController: UITableViewController, ListGenresDisplayable {
     
@@ -22,7 +19,7 @@ class ListGenresViewController: UITableViewController, ListGenresDisplayable {
         presenter: ListGenresPresenter(viewController: self),
         worker: JSONParserWorker())
     
-    var router: ListGenresRoutable?
+    //var router: ListGenresRoutable?
     var viewModel: ListGenresModels.ViewModel?
     
     
@@ -32,17 +29,39 @@ class ListGenresViewController: UITableViewController, ListGenresDisplayable {
         interactor.fetchGenres(with: ListGenresModels.FetchRequest())
     }
     
-    
-    
+
     func displayFetchedGenres(with viewModel: ListGenresModels.ViewModel) {
         self.viewModel = viewModel
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func display(error: AppModels.Error) {
         
     }
     
+}
+
+
+
+extension ListGenresViewController {
+    // tableview delegates
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let count = viewModel?.genres.count else {
+            return 0
+        }
+        return count
+    }
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")!
+        cell.textLabel?.text = viewModel?.genres[indexPath.row].name
+        
+        return cell
+    }
 }
