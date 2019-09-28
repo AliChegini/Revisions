@@ -13,14 +13,21 @@ protocol ListGenresRoutable {
 }
 
 
-class ListGenresRouter: ListGenresRoutable {
+class ListGenresRouter: ListGenresRoutable, ListGenresDataStore {
+    
     weak var viewController: UIViewController?
+    
+    var genres: [Genre]?
     
     init(viewController: UIViewController?) {
         self.viewController = viewController
     }
     
     func showGenres(for id: Int) {
-        // implement  later
+        let vc = ShowGenreViewController()
+        //vc.router.dataStore = dataStore?.filter { $0.id == id }.first
+        print(genres)
+        
+        viewController?.present(vc, animated: true, completion: nil)
     }
 }

@@ -11,12 +11,17 @@ protocol ListGenresBusinessLogic {
     func fetchGenres(with request: ListGenresModels.FetchRequest)
 }
 
+protocol ListGenresDataStore {
+    var genres: [Genre]? { get }
+}
 
-class ListGenresInteractor: ListGenresBusinessLogic {
-    
+
+class ListGenresInteractor: ListGenresBusinessLogic, ListGenresDataStore {
+
     let presenter: ListGenresPresentable
     let genresWorker: JSONParserWorker
     
+    var genres: [Genre]?
     
     init(presenter: ListGenresPresentable, worker: JSONParserWorker) {
         self.presenter = presenter
@@ -30,6 +35,7 @@ class ListGenresInteractor: ListGenresBusinessLogic {
                 // success case
                 let value = try genres.get()
                 self.presenter.presentFetchedGenres(for: ListGenresModels.Response(allGenresRaw: value))
+                self.genres = value.genres
             } catch {
                 // failure case
                 print(error)

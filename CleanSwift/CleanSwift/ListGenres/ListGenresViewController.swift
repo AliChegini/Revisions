@@ -19,7 +19,7 @@ class ListGenresViewController: UITableViewController, ListGenresDisplayable {
         presenter: ListGenresPresenter(viewController: self),
         worker: JSONParserWorker())
     
-    //var router: ListGenresRoutable?
+    lazy var router = ListGenresRouter(viewController: self)
     var viewModel: ListGenresModels.ViewModel?
     
     
@@ -63,5 +63,14 @@ extension ListGenresViewController {
         cell.textLabel?.text = viewModel?.genres[indexPath.row].name
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let model = viewModel?.genres[indexPath.row] else {
+            return
+        }
+        // continue working here work with viewModel
+        // work on passing data to other view
+        router.showGenres(for: model.id)
     }
 }
