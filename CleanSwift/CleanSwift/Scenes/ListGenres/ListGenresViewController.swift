@@ -69,8 +69,7 @@ extension ListGenresViewController {
         guard let model = viewModel?.genres[indexPath.row] else {
             return
         }
-        // continue working here work with viewModel
-        // work on passing data to other view
-        router.showGenres(for: model.id)
+    
+        router.showGenres(for: model)
     }
 }

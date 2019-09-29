@@ -10,4 +10,16 @@ import Foundation
 
 enum ShowGenreModels {
     
+    struct Request {
+        
+    }
+    
+    struct Response {
+        
+    }
+    
+    struct ViewModel {
+        let name: String
+        let id: String
+    }
 }

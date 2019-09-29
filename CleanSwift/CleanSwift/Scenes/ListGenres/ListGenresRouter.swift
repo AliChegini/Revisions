@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ListGenresRoutable {
-    func showGenres(for id: Int)
+    func showGenres(for model: ListGenresModels.GenresViewModel)
 }
 
 
@@ -17,17 +17,17 @@ class ListGenresRouter: ListGenresRoutable, ListGenresDataStore {
     
     weak var viewController: UIViewController?
     
+    // this var is only used when other scenes want to pass data to this scene
     var genres: [Genre]?
     
     init(viewController: UIViewController?) {
         self.viewController = viewController
     }
     
-    func showGenres(for id: Int) {
-        let vc = ShowGenreViewController()
-        //vc.router.dataStore = dataStore?.filter { $0.id == id }.first
-        print(genres)
+    func showGenres(for model: ListGenresModels.GenresViewModel) {
+        let showGenreVC = ShowGenreViewController()
+        showGenreVC.router.genre = Genre(id: model.id, name: model.name)
         
-        viewController?.present(vc, animated: true, completion: nil)
+        viewController?.present(showGenreVC, animated: true, completion: nil)
     }
 }
