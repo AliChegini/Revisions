@@ -15,6 +15,8 @@ protocol ListGenresDisplayable: class {
 
 class ListGenresViewController: UITableViewController, ListGenresDisplayable {
     
+    let listGenresUIElements = ListGenresUIs()
+    
     lazy var interactor: ListGenresBusinessLogic = ListGenresInteractor(
         presenter: ListGenresPresenter(viewController: self),
         worker: JSONParserWorker())
@@ -25,6 +27,9 @@ class ListGenresViewController: UITableViewController, ListGenresDisplayable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        listGenresUIElements.setupViews(in: view)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "myCell")
+        navigationItem.title = "Genres"
         
         interactor.fetchGenres(with: ListGenresModels.FetchRequest())
     }

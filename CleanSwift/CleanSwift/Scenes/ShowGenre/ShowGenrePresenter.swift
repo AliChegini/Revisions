@@ -24,7 +24,15 @@ class ShowGenrePresenter: ShowGenrePresentable {
     
     
     func displayGenre(for response: ShowGenreModels.Response) {
+        guard let name = response.genre?.name else {
+            return
+        }
+        guard let id = response.genre?.id else {
+            return
+        }
         
+        let viewModel = ShowGenreModels.ViewModel(name: name, id: "\(id)")
+        viewController?.displayGenre(with: viewModel)
     }
     
     

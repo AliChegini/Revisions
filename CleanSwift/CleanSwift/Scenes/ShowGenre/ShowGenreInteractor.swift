@@ -26,7 +26,7 @@ class ShowGenreInteractor: ShowGenreBusinessLogic {
     }
     
     func fetchGenre(with request: ShowGenreModels.Request) {
-        
+        presenter.displayGenre(for: ShowGenreModels.Response(genre: request.genre))
     }
     
     

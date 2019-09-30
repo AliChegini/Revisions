@@ -11,11 +11,11 @@ import Foundation
 enum ShowGenreModels {
     
     struct Request {
-        
+        let genre: Genre?
     }
     
     struct Response {
-        
+        let genre: Genre?
     }
     
     struct ViewModel {
